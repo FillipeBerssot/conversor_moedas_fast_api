@@ -1,78 +1,92 @@
-Conversor de Moedas - FastAPI
+# 🚀 Conversor de Moedas - FastAPI
 
-Este projeto é um Conversor de Moedas desenvolvido com FastAPI, permitindo a conversão de valores entre diferentes moedas utilizando APIs externas.
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Poetry](https://img.shields.io/badge/Poetry-60A5FA?style=for-the-badge&logo=poetry&logoColor=white)
 
-🚀 Funcionalidades
+Este projeto é um **Conversor de Moedas** desenvolvido com **FastAPI**, permitindo a conversão de valores entre diferentes moedas utilizando APIs externas.
 
-Conversão de moedas com base em valores atuais.
+---
 
-API síncrona utilizando FastAPI.
+## 🚀 Funcionalidades
+✅ Conversão de moedas com base em valores atuais.
+✅ API síncrona utilizando **FastAPI**.
+✅ Cobertura de testes utilizando **pytest** e **VCR.py**.
+✅ Configuração de variáveis de ambiente com **.env**.
+✅ Gerenciamento de dependências com **Poetry**.
+✅ Uso de **Ruff** para padronização do código.
+✅ Automação de tarefas com **Taskipy**.
 
-Cobertura de testes utilizando pytest e VCR.py.
+---
 
-Configuração de variáveis de ambiente com .env.
-
-Gerenciamento de dependências com Poetry.
-
-Uso de linter Ruff para padronização do código.
-
-Automação de tarefas com Taskipy.
-
-📌 Pré-requisitos
+## 📌 Pré-requisitos
 
 Antes de começar, você precisará ter os seguintes requisitos instalados:
 
-Python 3.12+
+- 📌 [Python 3.12+](https://www.python.org/downloads/)
+- 📌 [Poetry](https://python-poetry.org/docs/#installation)
+- 📌 [Taskipy](https://github.com/taskipy/taskipy)
+- 📌 [Git](https://git-scm.com/downloads)
 
-Poetry
+---
 
-Taskipy
+## 🔧 Instalação
 
-Git
+1️⃣ **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/conversor-moedas-fast-api.git
+   cd conversor-moedas-fast-api
+   ```
 
-🔧 Instalação
+2️⃣ **Instale as dependências com Poetry:**
+   ```bash
+   poetry install
+   ```
 
-Clone o repositório:
+3️⃣ **Ative o ambiente virtual do Poetry:**
+   ```bash
+   poetry shell
+   ```
 
-git clone https://github.com/seu-usuario/conversor-moedas-fast-api.git
-cd conversor-moedas-fast-api
+4️⃣ **Crie um arquivo `.env` na raiz do projeto e configure suas credenciais:**
+   ```ini
+   ALPHA_VANTAGE_API_NEW_KEY=suachaveaqui
+   ```
 
-Instale as dependências com Poetry:
+---
 
-poetry install
+## 🚀 Como Executar
 
-Ative o ambiente virtual do Poetry:
+Para rodar o servidor **FastAPI**, utilize o Taskipy:
 
-poetry shell
-
-Crie um arquivo .env na raiz do projeto e configure suas credenciais:
-
-ALPHA_VANTAGE_API_NEW_KEY=suachaveaqui
-
-🚀 Como Executar
-
-Para rodar o servidor FastAPI, utilize o Taskipy:
-
+```bash
 task run
+```
 
-A API estará disponível em:
+🔗 A API estará disponível em:
 
-Docs interativas (Swagger UI): http://127.0.0.1:8000/docs
+- 📄 **Docs interativas (Swagger UI):** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- 📄 **Redoc:** [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-Redoc: http://127.0.0.1:8000/redoc
+---
 
-🧪 Testes
+## 🧪 Testes
 
-O projeto inclui testes automatizados com pytest. Para executá-los, use o Taskipy:
+O projeto inclui testes automatizados com `pytest`. Para executá-los, use o Taskipy:
 
+```bash
 task test
+```
 
 Se quiser gerar um relatório de cobertura de código:
 
+```bash
 task post_test
+```
 
-📂 Estrutura do Projeto
+---
 
+## 📂 Estrutura do Projeto
+
+```bash
 conversor_moedas_fast_api/
 │── conversor_moedas_fast_api/
 │   ├── app.py                # Arquivo principal da aplicação
@@ -86,8 +100,11 @@ conversor_moedas_fast_api/
 │── pyproject.toml            # Gerenciamento de dependências (Poetry)
 │── .gitignore                # Arquivos ignorados pelo Git
 │── .env                      # Variáveis de ambiente (NÃO COMMITAR!)
+```
 
-🎯 Objetivo do Projeto
+---
 
-Este projeto foi desenvolvido como um estudo prático sobre FastAPI, testes automatizados e ferramentas auxiliares como Poetry, PyTest, Taskipy, Ruff e outros.
+## 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido como um estudo prático sobre **FastAPI**, **testes automatizados** e **ferramentas auxiliares** como **Poetry**, **PyTest**, **Taskipy**, **Ruff** e outros.
 O objetivo é aprimorar conhecimentos nessas tecnologias e aplicar boas práticas de desenvolvimento.
