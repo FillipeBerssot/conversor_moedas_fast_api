@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BRL&to_currency=USD&apikey=YTO8BVPI02YN0MM3
+  response:
+    body:
+      string: "{\n    \"Information\": \"Thank you for using Alpha Vantage! Our standard
+        API rate limit is 25 requests per day. Please subscribe to any of the premium
+        plans at https://www.alphavantage.co/premium/ to instantly remove all daily
+        rate limits.\"\n}"
+    headers:
+      Allow:
+      - GET, HEAD, OPTIONS
+      CF-RAY:
+      - 90fe242ec86bca92-GIG
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Date:
+      - Mon, 10 Feb 2025 18:25:22 GMT
+      Nel:
+      - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
+      Referrer-Policy:
+      - same-origin
+      Report-To:
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1739211922&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=fX33Nn2qOlwOG%2FFakxbRbShWcFOWiXE37taMoFZptfE%3D"}]}'
+      Reporting-Endpoints:
+      - heroku-nel=https://nel.heroku.com/reports?ts=1739211922&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=fX33Nn2qOlwOG%2FFakxbRbShWcFOWiXE37taMoFZptfE%3D
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Cookie, Origin
+      Via:
+      - 1.1 vegur
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '239'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - testserver
+      user-agent:
+      - testclient
+    method: GET
+    uri: http://testserver/conversor_moedas_fast_api/v1/converter/BRL?to_currencies=USD,EUR,JPY&price=10
+  response:
+    body:
+      string: "{\"detail\":\"400: O campo \\\"Realtime Currency Exchange Rate\\\"
+        n\xE3o existe na resposta da API. Verifique se os par\xE2metros informados
+        (from_currency e to_currency) est\xE3o corretos e se o par de moedas est\xE1
+        dispon\xEDvel. Error: {'Information': 'Thank you for using Alpha Vantage!
+        Our standard API rate limit is 25 requests per day. Please subscribe to any
+        of the premium plans at https://www.alphavantage.co/premium/ to instantly
+        remove all daily rate limits.'}\"}"
+    headers:
+      content-length:
+      - '459'
+      content-type:
+      - application/json
+    status:
+      code: 400
+      message: Bad Request
+version: 1
